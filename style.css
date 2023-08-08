@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    border: 5px solid black;
+    background-color: lime;
+    font-family: 'Orbitron', sans-serif;
+}
+.container{
+    padding: 25px;
+    border: 5px solid black;
+    background-color: yellow;
+    margin-bottom: 10px;
+}
+span{
+    padding-bottom: 10px;
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+button{
+    padding: 10px;
+    font-family: 'Orbitron', sans-serif;
+    margin-right: 10px;
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+
+
+.moving-footer {
+    /* This property positions the footer fixed within the viewport, which means it will stay in the same position even if the user scrolls. */
+    position: fixed;
+    /* This sets the distance of the footer from the bottom of the viewport. It's fixed at the bottom of the screen. */
+    bottom: 0;
+    /* This sets the initial horizontal position of the footer at the left edge of the viewport. */
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    overflow: hidden;
+    border: 5px solid black;
+}
+
+.content {
+    display: inline-block;
+    /* This prevents the content from wrapping to the next line. It ensures that the content stays in a single line. */
+    white-space: nowrap;
+    position: relative;
+    color: white;
+    animation: moveContent 20s linear infinite;
+}
+
+@keyframes moveContent {
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
